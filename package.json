@@ -39,6 +39,7 @@
     "supertest": "^3.3.0"
   },
   "dependencies": {
-    "koa-compose": "^4.1.0"
+    "koa-compose": "^4.1.0",
+    "debug": "latest"
   }
 }

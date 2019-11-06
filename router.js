@@ -1,5 +1,6 @@
 const http = require("http");
 const compose = require("koa-compose");
+const debug = require("debug")("koa:tree-router");
 const Node = require("./tree");
 
 const httpMethods = http.METHODS;
@@ -26,6 +27,7 @@ class Router {
     if (this.opts.prefix) {
       path = this.opts.prefix + path;
     }
+    debug(method, path);
     this.trees[method].addRoute(path, handle);
     return this;
   }
